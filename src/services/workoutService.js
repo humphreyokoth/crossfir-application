@@ -1,12 +1,12 @@
 const Workout = require("../database/Workout")
 
 
-// Get all workouts service
+// Get all workouts service.
 const getAllWorkouts =()=>{
     const allWorkouts = Workout.getAllWorkouts();
 return allWorkouts  ;
 };
-
+// Get one workout .
 const getOneWorkout=()=>{
     return;
 };
