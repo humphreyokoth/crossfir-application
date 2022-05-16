@@ -20,8 +20,12 @@ const createNewWorkout =(newWorkout)=>{
        createdAt:new Date().toLocaleString("en-US", { timeZone: "EAT" }),
        updatedAt:new Date().toLocaleString("en-US", { timeZone: "EAT" })
     }
+    try{
  const createdWorkout = Workout.createNewWorkout(workoutTOInsert);
     return createdWorkout;
+    }catch(error){
+     throw error;
+    }
 };
 
 const updateOneWorkout =(workoutId,changes)=>{
