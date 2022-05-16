@@ -5,8 +5,8 @@ const Workout = require("../database/Workout")
 
 // Get all workouts service.
 const getAllWorkouts =()=>{
-   // const allWorkouts = Workout.getAllWorkouts();
-return DB.workouts ;
+    const allWorkouts = Workout.getAllWorkouts();
+return allWorkouts ;
 };
 // Get one workout .
 const getOneWorkout=()=>{
@@ -19,17 +19,18 @@ const createNewWorkout =(newWorkout)=>{
        id:uuid(),
        createdAt:new Date().toLocaleString("en-US", { timeZone: "EAT" }),
        updatedAt:new Date().toLocaleString("en-US", { timeZone: "EAT" })
-}
-const createdWorkout = Workout.createNewWorkout(workoutTOInsert);
+    }
+ const createdWorkout = Workout.createNewWorkout(workoutTOInsert);
     return createdWorkout;
 };
 
-const updateOneWorkout =()=>{
-    return;
+const updateOneWorkout =(workoutId,changes)=>{
+   const updatedWorkout =Workout.updateOneWorkout(workoutId,changes);
+    return updatedWorkout;
 };
 
-const deleteOneWorkout =()=>{
-    return;
+const deleteOneWorkout =(workoutId)=>{
+    Workout.deleteOneWorkout(workoutId);
 };
 
 module.exports ={
