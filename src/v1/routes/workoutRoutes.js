@@ -13,7 +13,7 @@ router.get("/",workoutController.getAllWorkouts);
 router.get("/:workoutId",workoutController.getOneWorkout);
 
 //Records
-router.get("/:workoutId/records", recordController.getRecordForWorkout);
+//router.get("/:workoutId/records", recordController.getRecordForWorkout);
 
 // Create a new workout
 router.post("/",workoutController.createNewWorkout);
