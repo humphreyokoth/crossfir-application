@@ -41,7 +41,9 @@ res
 
     const{body}= req;
     if(!body.name ||!body.mode ||!body.equiment|| !body.exercises || !body.trainerTips){
-      res.status(400).send({status:"FAILED",data:{error:"one of the following keys is missing or is empty in the request body:'name', 'mode', 'equipment', 'exercises', 'trainerTips'",}});
+      res.
+      status(400)
+      .send({status:"FAILED",data:{error:"one of the following keys is missing or is empty in the request body:'name', 'mode', 'equipment', 'exercises', 'trainerTips'",}});
       return;
     };
     const newWorkout = {
