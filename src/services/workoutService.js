@@ -3,14 +3,14 @@ const Workout = require("../database/Workout");
 
 
 // Get all workouts service.
-const getAllWorkouts =()=>{
-try{
-    const allWorkouts = Workout.getAllWorkouts();
-    return allWorkouts ;
-}catch(error){
-    throw error;
-}
-};
+const getAllWorkouts = (filterParams) => {
+   try {
+     const allWorkouts = Workout.getAllWorkouts(filterParams);
+     return allWorkouts;
+   } catch (error) {
+     throw error;
+   }
+ };
 
 // Get one workout .
 const getOneWorkout=(workoutId)=>{
