@@ -8,6 +8,7 @@ const app = express();
 
 const PORT = process.env.PORT || 4000;
 
+const { swaggerDocs: V1SwaggerDocs } = require("./v1/swagger");
 
 // Middleware
 app.use(bodyParser.json());
